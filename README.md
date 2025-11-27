@@ -1,3 +1,4 @@
+````markdown
 # Resume Screening Agent
 
 [![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
@@ -69,3 +70,85 @@ pip install -r requirements.txt
 
 # Run Streamlit app
 streamlit run app/main.py
+````
+
+**Demo Steps:**
+
+1. Paste or upload a **Job Description** (`sample_data/sample_job_desc.txt`)
+2. Upload **sample resumes** (`sample_data/resumes/`)
+3. Wait for ranking; click **Explain** for candidate insights
+4. Download the **CSV shortlist**
+
+---
+
+## Limitations
+
+* PDF parsing may fail for **scanned/image-only PDFs**; use OCR externally
+* **Explanations** are rule-based (TF-IDF + regex), suitable for demos but less flexible than LLMs
+* First run downloads the embedding model (~50–200MB); subsequent runs are faster
+
+---
+
+## Potential Improvements
+
+* Add **OCR fallback** (Tesseract) for scanned resumes
+* Implement **resume anonymization** to reduce bias
+* Integrate a **labeled dataset** to tune ranking weights
+* Optionally, add a **local LLM** for richer explanations
+
+---
+
+## Architecture
+
+```mermaid
+flowchart TD
+    A[User - Streamlit UI] -->|Upload JD + Resumes| B[Streamlit App]
+    B --> C[Text Extraction (pdfminer / docx2txt)]
+    C --> D[Embedding (Sentence-Transformers — local)]
+    D --> E[FAISS Index (IndexFlatIP)]
+    B --> F[TF-IDF Keyword Extractor]
+    E --> G[Ranking Engine (Similarity + Keyword Match)]
+    F --> G
+    G --> B
+    B --> H[Shortlist CSV Export]
+```
+
+**Description:**
+
+* **Embeddings** capture semantic similarity between JD and resumes
+* **FAISS** provides fast similarity search
+* **TF-IDF** extracts key JD terms for interpretable matching
+* **Ranking Engine** combines similarity + keyword coverage
+* **Streamlit UI** displays rankings, explanations, and CSV export
+
+---
+
+## Quick Tips
+
+* Use **anonymized resumes** for fair evaluation
+* Reduce `max_features` in TF-IDF or `top_k` to speed up ranking on slower machines
+* Demonstrates **cost-effective, privacy-conscious AI** in hackathons or prototypes
+
+---
+
+## License
+
+MIT License — see [LICENSE](LICENSE)
+
+```
+
+---
+
+✅ **How to use in VS Code:**  
+1. Open your project folder in VS Code.  
+2. Create a new file `README.md`.  
+3. Copy-paste this content.  
+4. Press `Ctrl+Shift+V` (Windows/Linux) or `Cmd+Shift+V` (Mac) to preview Markdown.  
+5. Replace placeholder screenshots with your app’s real images or GIFs.  
+
+---
+
+If you want, I can also **prepare a full VS Code folder structure** with `app/`, `sample_data/`, `requirements.txt`, and this README — ready to run immediately with `streamlit run app/main.py`.  
+
+Do you want me to do that?
+```
