@@ -1,5 +1,4 @@
-````markdown
-# Resume Screening Agent
+# Resume Screening Agent — 100% Free (Local Models)
 
 [![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.20-brightgreen)](https://streamlit.io/)
@@ -8,57 +7,56 @@
 ---
 
 ## Overview
-The **Resume Screening Agent** ranks candidate resumes against a Job Description (JD) using **local embeddings** and **keyword matching** — no paid APIs required.
+**Resume Screening Agent** is a lightweight, privacy-conscious tool that ranks candidate resumes against a Job Description (JD) using **local embeddings** and **keyword-based analysis** — no paid APIs or cloud services required.
 
-Ideal for:
-- Cost-free demos
-- Privacy-conscious deployments
-- Quick AI prototyping
+This tool is ideal for:  
+- Quick, cost-free demos  
+- Hackathons and prototypes  
+- Privacy-sensitive environments  
 
 ---
 
-## Features
-- Upload **Job Description** (TXT / PDF / DOCX)
-- Upload multiple **resumes** (TXT / PDF / DOCX)
-- **Semantic ranking** using local Sentence-Transformers embeddings
-- **Keyword extraction** from JD using TF-IDF
-- **Rule-based explanations**: matched/missing keywords, experience, seniority
-- **Export ranked shortlist** as CSV
-- Simple **Streamlit UI**, fully local, no API keys
+## Key Features
+- **Upload Job Description** in TXT, PDF, or DOCX format  
+- **Upload multiple resumes** in TXT, PDF, or DOCX  
+- **Semantic ranking** using Sentence-Transformers (`all-MiniLM-L6-v2`)  
+- **Keyword extraction** via TF-IDF from the JD  
+- **Rule-based explanations**: matched/missing keywords, years of experience, and seniority  
+- **Export shortlist** as a CSV  
+- Fully **local Streamlit UI**, no API keys required  
 
 ---
 
 ## Tech Stack
-- **UI:** Streamlit
-- **Embeddings:** Sentence-Transformers (`all-MiniLM-L6-v2`)
-- **Vector search:** FAISS (IndexFlatIP)
-- **Keyword extraction:** scikit-learn TF-IDF
-- **File parsing:** pdfminer, docx2txt
+- **UI:** Streamlit  
+- **Embeddings:** Sentence-Transformers (`all-MiniLM-L6-v2`)  
+- **Vector search:** FAISS (IndexFlatIP)  
+- **Keyword extraction:** scikit-learn TF-IDF  
+- **File parsing:** pdfminer, docx2txt  
+- **Programming Language:** Python 3.11  
 
 ---
 
 ## Screenshots
 
 **Upload Job Description & Resumes**  
-
 ![Upload JD and Resumes](https://via.placeholder.com/800x400.png?text=Upload+JD+and+Resumes)
 
 **Ranked Candidates with Explanations**  
-
 ![Ranked Candidates](https://via.placeholder.com/800x400.png?text=Ranked+Candidates+and+Explanations)
 
-*Replace these URLs with real screenshots or GIFs of your app.*
+> Replace placeholder images with actual app screenshots or GIFs.
 
 ---
 
-## Setup & Run
+## Installation & Usage
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone <your-repo-url>
 cd resume-screening-agent
 
-# Create virtual environment
+# Create a virtual environment
 python -m venv venv
 # macOS/Linux
 source venv/bin/activate
@@ -68,33 +66,28 @@ venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Run Streamlit app
+# Launch the Streamlit app
 streamlit run app/main.py
-````
-
-**Demo Steps:**
-
-1. Paste or upload a **Job Description** (`sample_data/sample_job_desc.txt`)
-2. Upload **sample resumes** (`sample_data/resumes/`)
-3. Wait for ranking; click **Explain** for candidate insights
-4. Download the **CSV shortlist**
+## Quick Demo Steps
+1. Paste or upload a **Job Description** (`sample_data/sample_job_desc.txt`)  
+2. Upload **sample resumes** (`sample_data/resumes/`)  
+3. Wait for the ranking to complete; click **Explain** to see rule-based insights for each candidate  
+4. Download the **CSV shortlist** for further review  
 
 ---
 
 ## Limitations
-
-* PDF parsing may fail for **scanned/image-only PDFs**; use OCR externally
-* **Explanations** are rule-based (TF-IDF + regex), suitable for demos but less flexible than LLMs
-* First run downloads the embedding model (~50–200MB); subsequent runs are faster
+- PDF parsing may fail for **scanned/image-only PDFs**; consider OCR as a fallback  
+- Explanations are **rule-based** (TF-IDF + regex), less flexible than LLMs  
+- Initial run downloads the embedding model (~50–200MB), subsequent runs are faster  
 
 ---
 
 ## Potential Improvements
-
-* Add **OCR fallback** (Tesseract) for scanned resumes
-* Implement **resume anonymization** to reduce bias
-* Integrate a **labeled dataset** to tune ranking weights
-* Optionally, add a **local LLM** for richer explanations
+- Add **OCR fallback** (Tesseract) for scanned resumes  
+- Implement **resume anonymization** to reduce bias  
+- Integrate a **labeled dataset** to tune ranking weights  
+- Optionally, include a **local LLM** for richer explanations  
 
 ---
 
@@ -111,28 +104,26 @@ flowchart TD
     F --> G
     G --> B
     B --> H["Shortlist CSV Export"]
-```
+Architecture Highlights
 
-**Description:**
+Embeddings capture semantic similarity between JD and resumes
 
-* **Embeddings** capture semantic similarity between JD and resumes
-* **FAISS** provides fast similarity search
-* **TF-IDF** extracts key JD terms for interpretable matching
-* **Ranking Engine** combines similarity + keyword coverage
-* **Streamlit UI** displays rankings, explanations, and CSV export
+FAISS provides fast vector similarity search
 
----
+TF-IDF extracts key JD terms for interpretable matching
 
-## Quick Tips
+Ranking Engine combines semantic similarity with keyword coverage
 
-* Use **anonymized resumes** for fair evaluation
-* Reduce `max_features` in TF-IDF or `top_k` to speed up ranking on slower machines
-* Demonstrates **cost-effective, privacy-conscious AI** in hackathons or prototypes
+Streamlit UI displays rankings, explanations, and allows CSV export
 
----
+Best Practices
 
-## License
+Use anonymized resumes for fair evaluation
 
-MIT License — see [LICENSE](LICENSE)
+Adjust max_features in TF-IDF or top_k to optimize performance on slower machines
 
----
+Demonstrates cost-effective, privacy-focused AI for hackathons, prototypes, or internal demos
+
+License
+
+MIT License — see LICENSE
