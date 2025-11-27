@@ -1,4 +1,4 @@
-# Resume Screening Agent — 100% Free (Local Models)
+# Resume Screening Agent
 
 [![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.20-brightgreen)](https://streamlit.io/)
