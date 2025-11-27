@@ -1,0 +1,7 @@
+Jane Smith
+Email: jane@example.com
+Experience:
+- Frontend web development using JavaScript and React
+- Managed UI/UX design projects
+- Collaborated with cross-functional teams
+Skills: JavaScript, React, HTML, CSS, Communication

@@ -1,0 +1,9 @@
+streamlit>=1.20
+sentence-transformers>=2.2.2
+faiss-cpu>=1.7.4
+pypdf>=3.11.0
+docx2txt>=0.8
+pandas>=2.0
+scikit-learn>=1.2
+pdfminer.six>=20221105
+tqdm>=4.65

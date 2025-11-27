@@ -1,0 +1,7 @@
+John Doe
+Email: john@example.com
+Experience:
+- Developed machine learning models in Python for data analysis
+- Built REST API endpoints for internal applications
+- Worked with AWS cloud services
+Skills: Python, Machine Learning, REST APIs, AWS, Data Analysis

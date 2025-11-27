@@ -1,0 +1,9 @@
+Title: Backend Software Engineer
+
+We are looking for a Backend Software Engineer with experience in:
+- Python or Java
+- REST API design and implementation
+- Databases: PostgreSQL, MySQL or similar
+- Cloud services (AWS/GCP) and containerization (Docker)
+- 3+ years of software engineering experience
+- Familiarity with CI/CD, unit testing and monitoring

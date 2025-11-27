@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#9b59b6"        # Lavender purple for buttons, sliders, etc.
+backgroundColor = "#f3e8ff"     # Very light lavender for background
+secondaryBackgroundColor = "#e6d6f5"  # Sidebar and cards
+textColor = "#3b0a45"           # Dark purple for text
+font = "sans serif"

@@ -1,0 +1,7 @@
+Alice Johnson
+Email: alice@example.com
+Experience:
+- Designed AI-powered chatbots using Python and NLP libraries
+- Deployed machine learning models on Azure
+- Worked on data visualization and reporting
+Skills: Python, AI, Machine Learning, NLP, Azure, Data Visualization

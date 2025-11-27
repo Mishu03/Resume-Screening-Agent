@@ -1,0 +1,4 @@
+John Doe
+Senior Backend Engineer with 5 years of experience building REST APIs in Python.
+Experience with PostgreSQL, Docker, and AWS. Implemented CI/CD pipelines with GitHub Actions.
+Worked on unit testing and monitoring with Prometheus and Grafana.
