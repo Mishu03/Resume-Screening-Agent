@@ -1,5 +1,4 @@
-# Resume Screening Agent — 100% Free (Local Models)
-
+# Resume Screening Agent 
 [![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.20-brightgreen)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -51,7 +50,6 @@ This tool is ideal for:
 
 ## Installation & Usage
 
-```bash
 # Clone the repository
 git clone <your-repo-url>
 cd resume-screening-agent
@@ -104,6 +102,8 @@ flowchart TD
     F --> G
     G --> B
     B --> H["Shortlist CSV Export"]
+
+```
 Architecture Highlights
 
 Embeddings capture semantic similarity between JD and resumes
