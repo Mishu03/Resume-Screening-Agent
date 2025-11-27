@@ -135,20 +135,4 @@ flowchart TD
 
 MIT License — see [LICENSE](LICENSE)
 
-```
-
 ---
-
-✅ **How to use in VS Code:**  
-1. Open your project folder in VS Code.  
-2. Create a new file `README.md`.  
-3. Copy-paste this content.  
-4. Press `Ctrl+Shift+V` (Windows/Linux) or `Cmd+Shift+V` (Mac) to preview Markdown.  
-5. Replace placeholder screenshots with your app’s real images or GIFs.  
-
----
-
-If you want, I can also **prepare a full VS Code folder structure** with `app/`, `sample_data/`, `requirements.txt`, and this README — ready to run immediately with `streamlit run app/main.py`.  
-
-Do you want me to do that?
-```
