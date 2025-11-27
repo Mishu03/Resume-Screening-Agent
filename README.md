@@ -102,15 +102,15 @@ streamlit run app/main.py
 
 ```mermaid
 flowchart TD
-    A[User - Streamlit UI] -->|Upload JD + Resumes| B[Streamlit App]
-    B --> C[Text Extraction (pdfminer / docx2txt)]
-    C --> D[Embedding (Sentence-Transformers — local)]
-    D --> E[FAISS Index (IndexFlatIP)]
-    B --> F[TF-IDF Keyword Extractor]
-    E --> G[Ranking Engine (Similarity + Keyword Match)]
+    A["User - Streamlit UI"] -->|Upload JD + Resumes| B["Streamlit App"]
+    B --> C["Text Extraction (pdfminer / docx2txt)"]
+    C --> D["Embedding (Sentence-Transformers — local)"]
+    D --> E["FAISS Index (IndexFlatIP)"]
+    B --> F["TF-IDF Keyword Extractor"]
+    E --> G["Ranking Engine (Similarity + Keyword Match)"]
     F --> G
     G --> B
-    B --> H[Shortlist CSV Export]
+    B --> H["Shortlist CSV Export"]
 ```
 
 **Description:**
