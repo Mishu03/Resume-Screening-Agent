@@ -104,26 +104,21 @@ flowchart TD
     B --> H["Shortlist CSV Export"]
 
 ```
-Architecture Highlights
+## Architecture Highlights
+- **Embeddings** capture semantic similarity between JD and resumes  
+- **FAISS** provides fast vector similarity search  
+- **TF-IDF** extracts key JD terms for interpretable matching  
+- **Ranking Engine** combines semantic similarity with keyword coverage  
+- **Streamlit UI** displays rankings, explanations, and allows CSV export  
 
-Embeddings capture semantic similarity between JD and resumes
+---
 
-FAISS provides fast vector similarity search
+## Best Practices
+- Use **anonymized resumes** for fair evaluation  
+- Adjust `max_features` in TF-IDF or `top_k` to optimize performance on slower machines  
+- Demonstrates **cost-effective, privacy-focused AI** for hackathons, prototypes, or internal demos  
 
-TF-IDF extracts key JD terms for interpretable matching
+---
 
-Ranking Engine combines semantic similarity with keyword coverage
-
-Streamlit UI displays rankings, explanations, and allows CSV export
-
-Best Practices
-
-Use anonymized resumes for fair evaluation
-
-Adjust max_features in TF-IDF or top_k to optimize performance on slower machines
-
-Demonstrates cost-effective, privacy-focused AI for hackathons, prototypes, or internal demos
-
-License
-
-MIT License — see LICENSE
+## License
+MIT License — see [LICENSE](LICENSE)
